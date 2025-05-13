@@ -508,7 +508,6 @@
         }
         
         /* Footer */
-/* Footer Styles */
 .footer {
     background-color: #171717;
     color: #ffffff;
@@ -534,25 +533,30 @@
 .footer-info {
     flex: 1;
     min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.footer-logo {
+.footer-logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
+    gap: 10px;
 }
 
-.footer-logo img {
+.footer-logo {
     height: 28px;
-    width: 22px;
-    margin-right: 10px;
+    width: auto;
+    max-width: 22px;
 }
 
 .footer-logo-text {
     font-size: 20px;
     font-weight: 400;
     color: #ffffff;
+    line-height: 1;
 }
 
 .footer-tagline {
@@ -560,6 +564,7 @@
     line-height: 1.6;
     color: #a3a3a3;
     margin-top: 10px;
+    max-width: 250px;
 }
 
 .footer-links {
@@ -584,7 +589,7 @@
     transform: translateX(-50%);
     width: 40px;
     height: 2px;
-    background-color: #93151700;
+    background-color: rgba(147, 21, 23, 0);
 }
 
 .footer-links ul {
@@ -597,32 +602,39 @@
     margin-bottom: 12px;
 }
 
-.footer-links a {
+.footer-link {
     font-size: 16px;
     color: #a3a3a3;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.footer-links a:hover {
+.footer-link:hover {
     color: #ffffff;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: -5px;
+    gap: 3px;
+    margin-top: 0px;
 }
 
-.social-links a {
-    color: #a3a3a3;
-    font-size: 20px;
-    transition: color 0.3s;
+.social-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.3s;
 }
 
-.social-links a:hover {
-    color: #ffffff;
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+
+.social-links a[aria-label="TikTok"] .social-icon {
+    width: 28px;
+    height: 19px;
 }
 
 .footer-bottom {
@@ -654,17 +666,7 @@
         display: none;
     }
 }
-        .social-icons {
-            display: flex;
-            gap: 16px;
-            margin-top: 8px;
-        }
-        
-        .social-icon {
-            width: 14px;
-            height: 16px;
-            cursor: pointer;
-        }
+
         
         .copyright {
             font-size: 16px;
@@ -883,14 +885,16 @@
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-columns">
+            <!-- Logo Section -->
             <div class="footer-info">
-                <div class="footer-logo">
-                    <img src="Images/images-donate/img_logo_formal_1_1.png" alt="Transfornation Logo">
+                <div class="footer-logo-container">
+                    <img src="Images/images-donate/img_logo_formal_1_1.png" alt="Transfornation Logo" class="footer-logo">
                     <span class="footer-logo-text">Transfornation</span>
                 </div>
                 <p class="footer-tagline">Making a difference through community service.</p>
             </div>
             
+            <!-- Quick Links -->
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -901,19 +905,21 @@
                 </ul>
             </div>
             
+            <!-- Social Links -->
             <div class="footer-links">
                 <h3>Connect</h3>
                 <div class="social-links">
                     <a href="https://www.instagram.com/transfornation.id" aria-label="Instagram">
                         <img src="Images/images-donate/img_frame.svg" alt="Instagram" class="social-icon">
                     </a>
-                    <a href="#" aria-label="LinkedIn">
-                        <img src="Images/images-donate/img_frame_16x14.svg" alt="LinkedIn" class="social-icon">
+                    <a href="https://www.tiktok.com/@transfornation_id" aria-label="TikTok">
+                        <img src="Images/images-donate/tiktok.svg" alt="TikTok" class="social-icon">
                     </a>
                 </div>
             </div>
         </div>
         
+        <!-- Copyright -->
         <div class="footer-bottom">
             <p>Copyright ©2025<br>Transfornation.</p>
         </div>

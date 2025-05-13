@@ -526,13 +526,13 @@
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 7px;
+    margin-top: 0px;
 }
 
 .social-icon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     filter: brightness(0) invert(1);
     transition: opacity 0.3s;
 }
@@ -611,6 +611,12 @@
 .social-icon {
     filter: brightness(0) invert(1); /* Makes icons white */
     width: 15px; /* Standardizes icon size */
+}
+
+/* Optional: Larger TikTok icon */
+.social-links a[aria-label="TikTok"] .social-icon {
+  width: 26px;  /* Slightly larger */
+  height: 22px;
 }
 
 .footer-logo {
@@ -780,8 +786,8 @@
                     <a href="https://www.instagram.com/transfornation.id" aria-label="Instagram">
                         <img src="Images/images-about/img_frame.svg" alt="Instagram" class="social-icon">
                     </a>
-                    <a href="#" aria-label="LinkedIn">
-                        <img src="Images/images-about/img_frame_16x14.svg" alt="LinkedIn" class="social-icon">
+                    <a href="https://www.tiktok.com/@transfornation_id" aria-label="TikTok">
+                        <img src="Images/images-about/tiktok.svg" alt="TikTok" class="social-icon">
                     </a>
                 </div>
             </div>
@@ -860,7 +866,7 @@ document.querySelectorAll('.mobile-menu-content a').forEach(link => {
 
 // Add to toggle event listener
 document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
-        
+
         // Navigation links functionality
       
         

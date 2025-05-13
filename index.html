@@ -566,152 +566,165 @@
         }
         
         /* Footer */
-    /* Updated Footer Styles */
-    .footer {
-        background-color: #171717;
-        color: #ffffff;
-        padding: 60px 20px 30px;
-        text-align: center;
-    }
-    
-    .footer-content {
-        max-width: 1000px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-    
+/* Footer Styles */
+.footer {
+    background-color: #171717;
+    color: #ffffff;
+    padding: 60px 20px 30px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-info {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+.footer-logo {
+    height: 28px;
+    width: auto;
+    max-width: 22px;
+}
+
+.footer-logo-text {
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.footer-tagline {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #a3a3a3;
+    margin-top: 10px;
+    max-width: 250px;
+}
+
+.footer-links {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-links h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer-links h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: rgba(147, 21, 23, 0);
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-link {
+    font-size: 16px;
+    color: #a3a3a3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 0px;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.3s;
+}
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* Larger TikTok icon */
+.social-links a[aria-label="TikTok"] .social-icon {
+    width: 26px;
+    height: 22px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #a3a3a3;
+    line-height: 1.6;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
     .footer-columns {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        gap: 40px;
-    }
-    
-    .footer-info {
-        flex: 1;
-        min-width: 250px;
-    }
-    
-    .footer-logo {
-        display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
-        margin-bottom: 15px;
-    }
-    
-    .footer-logo img {
-        height: 28px;
-        width: 22px;
-        margin-right: 10px;
-    }
-    
-    .footer-logo-text {
-        font-size: 20px;
-        font-weight: 400;
-        color: #ffffff;
-    }
-    
-    .footer-tagline {
-        font-size: 16px;
-        line-height: 1.6;
-        color: #a3a3a3;
-        margin-top: 10px;
+        gap: 30px;
     }
     
     .footer-links {
-        flex: 1;
-        min-width: 150px;
-    }
-    
-    .footer-links h3 {
-        font-size: 18px;
-        font-weight: 500;
-        color: #ffffff;
-        margin-bottom: 20px;
-        position: relative;
-        display: inline-block;
+        text-align: center;
     }
     
     .footer-links h3::after {
-        content: '';
-        position: absolute;
-        bottom: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 40px;
-        height: 2px;
-        background-color: #93151700;
+        display: none;
     }
-    
-    .footer-links ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .footer-links li {
-        margin-bottom: 12px;
-    }
-    
-    .footer-links a {
-        font-size: 16px;
-        color: #a3a3a3;
-        text-decoration: none;
-        transition: color 0.3s;
-    }
-    
-    .footer-links a:hover {
-        color: #ffffff;
-    }
-    
-    .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: -5px;
-    }
-    
-    .social-links a {
-        color: #a3a3a3;
-        font-size: 20px;
-        transition: color 0.3s;
-    }
-    
-    .social-links a:hover {
-        color: #ffffff;
-    }
-    
-    .footer-bottom {
-        text-align: center;
-        padding-top: 30px;
-        margin-top: 30px;
-        border-top: 1px solid #333;
-    }
-    
-    .footer-bottom p {
-        font-size: 14px;
-        color: #a3a3a3;
-        line-height: 1.6;
-        margin: 0;
-    }
-    
-    @media (max-width: 768px) {
-        .footer-columns {
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-        }
-        
-        .footer-links {
-            text-align: center;
-        }
-        
-        .footer-links h3::after {
-            display: none;
-        }
-    }
+}
         
         @media (max-width: 1024px) {
             .mission-section {
@@ -923,40 +936,45 @@
     </section>
     
     <!-- Footer -->
+<!-- Footer -->
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-columns">
+            <!-- Logo Section -->
             <div class="footer-info">
-                <div class="footer-logo">
-                    <img src="Images/images-home/img_logo_formal_1_1.png" alt="Transfornation Logo">
+                <div class="footer-logo-container">
+                    <img src="Images/images-home/img_logo_formal_1_1.png" alt="Transfornation Logo" class="footer-logo">
                     <span class="footer-logo-text">Transfornation</span>
                 </div>
                 <p class="footer-tagline">Making a difference through community service.</p>
             </div>
             
+            <!-- Quick Links -->
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="program.html">Programs</a></li>
-                    <li><a href="https://linktr.ee/transfornation" target="_blank">Get Involved</a></li>
-
+                    <li><a href="index.html" class="footer-link">Home</a></li>
+                    <li><a href="about.html" class="footer-link">About Us</a></li>
+                    <li><a href="program.html" class="footer-link">Programs</a></li>
+                    <li><a href="https://linktr.ee/transfornation" class="footer-link" target="_blank">Get Involved</a></li>
                 </ul>
             </div>
             
+            <!-- Social Links -->
             <div class="footer-links">
                 <h3>Connect</h3>
                 <div class="social-links">
                     <a href="https://www.instagram.com/transfornation.id" aria-label="Instagram">
-                        <img src="Images/images-about/img_frame.svg" alt="Instagram" class="social-icon">
+                        <img src="Images/images-home/img_frame.svg" alt="Instagram" class="social-icon">
                     </a>
-                    <a href="#" aria-label="LinkedIn">
-                        <img src="Images/images-about/img_frame_16x14.svg" alt="LinkedIn" class="social-icon">
+                    <a href="https://www.tiktok.com/@transfornation_id" aria-label="TikTok">
+                        <img src="Images/images-home/tiktok.svg" alt="TikTok" class="social-icon">
                     </a>
                 </div>
             </div>
         </div>
         
+        <!-- Copyright -->
         <div class="footer-bottom">
             <p>Copyright ©2025<br>Transfornation.</p>
         </div>
