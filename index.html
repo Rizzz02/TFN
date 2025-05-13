@@ -679,6 +679,25 @@
                 gap: 30px;
             }
         }
+
+        /* Mobile-first base styles */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px; /* Better text scaling */
+  }
+  
+  .navbar {
+    padding: 0 10px;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -811,10 +830,10 @@
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Programs</a></li>
-                    <li><a href="#">Get Involved</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="program.html">Programs</a></li>
+                    <li><a href="https://linktr.ee/transfornation" target="_blank">Get Involved</a></li>
+
                 </ul>
             </div>
             
