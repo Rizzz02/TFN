@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,23 +12,15 @@
         }
         
         body {
-            background-color: #ffffff;
+            background-color: #F5F9F8; /* Background */
         }
         
-        .main-container {
-            position: relative;
-            width: 100%;
-            max-width: 1530px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-        
-        /* Header Styles */
+        /* Header */
         .header {
             position: fixed;
             width: 100%;
             height: 72px;
-            background-color: #898366;
+            background-color: #6CA7D4; /* Primary */
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -38,8 +29,6 @@
             top: 0;
             left: 0;
         }
-
-
         
         .logo-container {
             display: flex;
@@ -56,7 +45,7 @@
             font-size: 20px;
             font-weight: 400;
             line-height: 25px;
-            color: #ffffff;
+            color: #FFFFFF; /* Text (Light) */
         }
         
         .nav-menu {
@@ -64,162 +53,121 @@
             align-items: center;
             gap: 30px;
         }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
         
         .nav-link {
+            color: #FFFFFF; /* Text (Light) */
             font-size: 16px;
-            font-weight: 400;
-            line-height: 20px;
-            color: #ffffff;
             text-decoration: none;
-            cursor: pointer;
             transition: opacity 0.3s;
-            position: relative;
         }
         
         .nav-link:hover {
-            text-decoration: underline;
             opacity: 0.8;
         }
         
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #ffffff;
-            animation: underlineFadeIn o.3s ease-out;
-        }
-
-        @keyframes underlineFadeIn {
-            from { transform: scaleX(0); }
-            to { transform: scaleX(1); }
-        }
-
-/* Mobile Menu Toggle Button */
-.mobile-menu-toggle {
-  display: none; /* Hidden by default (shown only on mobile) */
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 1001;
-}
-
-.toggle-bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: #ffffff;
-  margin: 5px 0;
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-/* Mobile Menu Overlay */
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(137, 131, 102, 0.95);
-  z-index: 1000;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.mobile-menu-content {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  text-align: center;
-}
-
-.mobile-menu-content a {
-  color: #ffffff;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 10px;
-}
-
-.mobile-donate-btn {
-  background: #931518;
-  border-radius: 20px;
-  padding: 10px 20px !important;
-}
-
-/* Active state for mobile menu */
-.mobile-menu-overlay.active {
-  display: flex;
-}
-
-/* Transform toggle into "X" when active */
-.mobile-menu-toggle.active .toggle-bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-.mobile-menu-toggle.active .toggle-bar:nth-child(2) {
-  opacity: 0;
-}
-.mobile-menu-toggle.active .toggle-bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-/* Hide desktop nav on mobile */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none !important; /* Force hide desktop nav */
-  }
-  .mobile-menu-toggle {
-    display: block; /* Show toggle button */
-  }
-}
-
-.mobile-menu-overlay {
-  transition: opacity 0.3s;
-  opacity: 0;
-}
-.mobile-menu-overlay.active {
-  opacity: 1;
-}
-
-
-.donate-btn {
-    background-color: #931518;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.2s ease;
-    position: relative; /* Remove if already in parent */
-    overflow: hidden; /* Contain any effects */
-}
-
-.donate-btn:hover {
-    background-color: #7a1214 !important; /* Force override */
-    transform: none !important; /* Disable transforms if conflicting */
-}
-
-/* Remove ALL ::after/::before pseudo-elements */
-.donate-btn::before, .donate-btn::after {
-    content: none !important;
-}
-
-        .donate-btn:active {
-            transform: translateY(1px);
+        .donate-btn {
+            background-color: #A6D49F; /* Secondary */
+            color: #333333; /* Text (Dark) */
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
         }
         
+        .donate-btn:hover {
+            background-color: #8EC486; /* Darker Secondary */
+        }
+
+        /* Mobile Menu Toggle Button */
+        .mobile-menu-toggle {
+          display: none;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 10px;
+          z-index: 1001;
+        }
+
+        .toggle-bar {
+          display: block;
+          width: 25px;
+          height: 3px;
+          background: #FFFFFF; /* Text (Light) */
+          margin: 5px 0;
+          transition: transform 0.3s, opacity 0.3s;
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(108, 167, 212, 0.95); /* Primary with opacity */
+          z-index: 1000;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .mobile-menu-content {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+          text-align: center;
+        }
+
+        .mobile-menu-content a {
+          color: #FFFFFF; /* Text (Light) */
+          font-size: 20px;
+          text-decoration: none;
+          padding: 10px;
+        }
+
+        .mobile-donate-btn {
+          background: #A6D49F; /* Secondary */
+          border-radius: 20px;
+          padding: 10px 20px !important;
+          color: #333333; /* Text (Dark) */
+        }
+
+        /* Active state for mobile menu */
+        .mobile-menu-overlay.active {
+          display: flex;
+        }
+
+        /* Transform toggle into "X" when active */
+        .mobile-menu-toggle.active .toggle-bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        .mobile-menu-toggle.active .toggle-bar:nth-child(2) {
+          opacity: 0;
+        }
+        .mobile-menu-toggle.active .toggle-bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Hide desktop nav on mobile */
+        @media (max-width: 768px) {
+          .nav-menu {
+            display: none;
+          }
+          .mobile-menu-toggle {
+            display: block;
+          }
+        }
+
+        .mobile-menu-overlay {
+          transition: opacity 0.3s;
+          opacity: 0;
+        }
+        .mobile-menu-overlay.active {
+          opacity: 1;
+        }
+
         /* Hero Section */
         .hero-section {
             position: relative;
@@ -249,8 +197,8 @@
         .hero-title {
             font-size: 36px;
             font-weight: 600;
-            line-height: 14px;
-            color: #ffffff;
+            line-height: 44px;
+            color: #FFFFFF; /* Text (Light) */
             text-align: center;
             margin-bottom: 19px;
         }
@@ -259,7 +207,7 @@
             font-size: 16px;
             font-weight: 300;
             line-height: 20px;
-            color: #ffffff;
+            color: #FFFFFF; /* Text (Light) */
             text-align: center;
             margin-bottom: 34px;
         }
@@ -268,7 +216,7 @@
         .qr-container {
             width: 400px;
             height: 448px;
-            background-color: rgba(137, 131, 102, 0.42);
+            background-color: rgba(108, 167, 212, 0.42); /* Primary with opacity */
             border-radius: 8px;
             display: flex;
             flex-direction: column;
@@ -281,8 +229,8 @@
 
         .qr-container:hover {
             transform: translateY(-8px);
-            box-shadow: 0, 12px, 24px rgba(0, 0, 0, 0.2);
-            background-color: rgba(137, 131, 102, 0.6);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+            background-color: rgba(108, 167, 212, 0.6); /* Primary with more opacity */
         }
         
         .qr-frame {
@@ -294,14 +242,13 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 17px;
-            transition: all 0.3 ease;
+            transition: all 0.3s ease;
         }
 
         .qr-container:hover .qr-frame {
             transform: scale(1.02);
             background-color: rgba(0, 0, 0, 0.2);
         }
-
         
         .qr-code {
             width: 265px;
@@ -313,14 +260,13 @@
             font-size: 14px;
             font-weight: 700;
             line-height: 16px;
-            color: #ffffff;
+            color: #FFFFFF; /* Text (Light) */
             text-align: center;
-            transition: all 0.3 ease;
-            position: relative;
+            transition: all 0.3s ease;
         }
 
         .qr-container:hover .qr-text {
-            color: #faaf17;
+            color: #A6D49F; /* Secondary */
             transform: scale(1.05);
         }
 
@@ -338,7 +284,7 @@
             font-size: 16px;
             font-weight: 600;
             line-height: 16px;
-            color: #ffffff;
+            color: #FFFFFF; /* Text (Light) */
             text-align: center;
             margin-top: 20px;
             margin-bottom: 20px;
@@ -348,7 +294,7 @@
             width: 284px;
             height: 128px;
             background-color: rgba(255, 255, 255, 0.04);
-            border: 2px solid #ffffff;
+            border: 2px solid #FFFFFF;
             border-radius: 8px;
             padding: 18px;
             box-shadow: 0px 4px 4px rgba(136, 136, 136, 0);
@@ -359,74 +305,65 @@
             transform: translateY(-5px) scale(1.02);
             box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
             background-color: rgba(255, 255, 255, 0.1);
-            border-color: #faaf17;
+            border-color: #A6D49F; /* Secondary */
         }
 
         .bank-details-title {
             font-size: 16px;
             font-weight: 600;
             line-height: 20px;
-            color: #ffffff;
+            color: #FFFFFF; /* Text (Light) */
             text-align: center;
             margin-bottom: 4px;
         }
 
         .bank-details:hover .account-number {
             color: #4dabf7;
-            text-shadow: 0 0 8px rgba(250, 175, 23, 0.3);
+            text-shadow: 0 0 8px rgba(166, 212, 159, 0.3); /* Secondary glow */
         }
         
         .bank-details-text {
             font-size: 16px;
             font-weight: 300;
             line-height: 20px;
-            color: #ffffff;
+            color: #FFFFFF; /* Text (Light) */
             text-align: center;
             margin-bottom: 4px;
-            transition: all 0.2 ease;
         }
 
-/* Account number specific styling */
-.account-number {
-    color: #4dabf7;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: 400;
-    position: relative;
-    transition: all 0.3s ease;
-}
+        /* Account number styling */
+        .account-number {
+            color: #4dabf7;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: 400;
+            position: relative;
+            transition: all 0.3s ease;
+        }
 
-/* Hover effects */
-.account-number:hover {
-    color: #339af0;
-    text-decoration: none;
-}
+        .account-number:hover {
+            color: #339af0;
+        }
 
-/* Animated underline effect */
-.account-number::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: #339af0;
-    transition: width 0.2s ease;
-}
+        .account-number::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #339af0;
+            transition: width 0.2s ease;
+        }
 
-.account-number:hover::after {
-    width: 100%;
-}
+        .account-number:hover::after {
+            width: 100%;
+        }
 
-/* Ensure the rest of the text remains normal */
-.bank-details-text {
-    color: #ffffff;
-}
-        
         /* Form Section */
         .form-section {
             width: 100%;
-            background-color: #d9d9d9;
+            background-color: #D3E3DC; /* Accent */
             padding: 30px 0 60px;
         }
         
@@ -434,7 +371,7 @@
             font-size: 36px;
             font-weight: 400;
             line-height: 44px;
-            color: #000000;
+            color: #333333; /* Text (Dark) */
             text-align: center;
             margin-bottom: 5px;
         }
@@ -478,7 +415,7 @@
         .form-input {
             width: 100%;
             height: 42px;
-            background-color: #ffffff;
+            background-color: #FFFFFF;
             border: 1px solid #d4d4d4;
             border-radius: 8px;
             padding: 0 12px;
@@ -487,218 +424,258 @@
         
         .form-input:focus {
             outline: none;
-            border-color: #898366;
+            border-color: #6CA7D4; /* Primary */
         }
         
         .submit-btn {
             width: 100%;
             height: 48px;
-            background-color: #262626;
-            color: #ffffff;
+            background-color: #6CA7D4; /* Primary */
+            color: #FFFFFF; /* Text (Light) */
             font-size: 16px;
             font-weight: 400;
             line-height: 20px;
             border: none;
             border-radius: 8px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         
         .submit-btn:hover {
-            background-color: #404040;
+            background-color: #5E8EB3; /* Button Hover */
         }
-        
+
         /* Footer */
-.footer {
-    background-color: #171717;
-    color: #ffffff;
-    padding: 60px 20px 30px;
-    text-align: center;
-}
-
-.footer-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.footer-columns {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.footer-info {
-    flex: 1;
-    min-width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.footer-logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-    gap: 10px;
-}
-
-.footer-logo {
-    height: 28px;
-    width: auto;
-    max-width: 22px;
-}
-
-.footer-logo-text {
-    font-size: 20px;
-    font-weight: 400;
-    color: #ffffff;
-    line-height: 1;
-}
-
-.footer-tagline {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #a3a3a3;
-    margin-top: 10px;
-    max-width: 250px;
-}
-
-.footer-links {
-    flex: 1;
-    min-width: 150px;
-}
-
-.footer-links h3 {
-    font-size: 18px;
-    font-weight: 500;
-    color: #ffffff;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
-
-.footer-links h3::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 2px;
-    background-color: rgba(147, 21, 23, 0);
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-links li {
-    margin-bottom: 12px;
-}
-
-.footer-link {
-    font-size: 16px;
-    color: #a3a3a3;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-link:hover {
-    color: #ffffff;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 3px;
-    margin-top: 0px;
-}
-
-.social-icon {
-    width: 20px;
-    height: 20px;
-    filter: brightness(0) invert(1);
-    transition: opacity 0.3s;
-}
-
-.social-icon:hover {
-    opacity: 0.8;
-}
-
-
-.social-links a[aria-label="TikTok"] .social-icon {
-    width: 28px;
-    height: 19px;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    margin-top: 30px;
-    border-top: 1px solid #333;
-}
-
-.footer-bottom p {
-    font-size: 14px;
-    color: #a3a3a3;
-    line-height: 1.6;
-    margin: 0;
-}
-
-@media (max-width: 768px) {
-    .footer-columns {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-    
-    .footer-links {
-        text-align: center;
-    }
-    
-    .footer-links h3::after {
-        display: none;
-    }
-}
-
-        
-        .copyright {
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 16px;
-            color: #a3a3a3;
+        .footer {
+            background-color: #333333; /* Text (Dark) */
+            color: #FFFFFF; /* Text (Light) */
+            padding: 60px 20px 30px;
             text-align: center;
-            margin-top: 40px;
         }
-        
-        /* Responsive */
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .footer-columns {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-info {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
+
+        .footer-logo {
+            height: 28px;
+            width: auto;
+            max-width: 22px;
+        }
+
+        .footer-logo-text {
+            font-size: 20px;
+            font-weight: 400;
+            color: #FFFFFF; /* Text (Light) */
+            line-height: 1;
+        }
+
+        .footer-tagline {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #D3E3DC; /* Accent */
+            margin-top: 10px;
+            max-width: 250px;
+        }
+
+        .footer-links {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .footer-links h3 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #FFFFFF; /* Text (Light) */
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: rgba(108, 167, 212, 0); /* Primary with opacity */
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-link {
+            font-size: 16px;
+            color: #D3E3DC; /* Accent */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-link:hover {
+            color: #FFFFFF; /* Text (Light) */
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+            margin-top: 0px;
+        }
+
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1);
+            transition: opacity 0.3s;
+        }
+
+        .social-icon:hover {
+            opacity: 0.8;
+        }
+
+        .social-links a[aria-label="TikTok"] .social-icon {
+            width: 28px;
+            height: 19px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            color: #D3E3DC; /* Accent */
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .footer-columns {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            
+            .footer-links {
+                text-align: center;
+            }
+            
+            .footer-links h3::after {
+                display: none;
+            }
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border-top: 4px solid #6CA7D4; /* Primary */
+        }
+
+        .modal h3 {
+            color: #6CA7D4; /* Primary */
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .modal p {
+            color: #525252;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        #userEmail {
+            font-weight: bold;
+            color: #6CA7D4; /* Primary */
+        }
+
+        .modal-close-btn {
+            background-color: #6CA7D4; /* Primary */
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .modal-close-btn:hover {
+            background-color: #5E8EB3; /* Button Hover */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         @media (max-width: 768px) {
             .header {
                 padding: 0 10px;
             }
             
-            .nav-menu {
-                display: none;
+            .form-input, .submit-btn {
+                min-height: 48px;
             }
             
             .qr-container {
-                width: 90%;
-                max-width: 400px;
-            }
-            
-            .footer-container {
-                flex-direction: column;
-                padding: 0 20px;
-            }
-            
-            .footer-column {
-                margin-bottom: 30px;
+                width: 95%;
             }
             
             .form-row {
@@ -706,235 +683,149 @@
                 gap: 15px;
             }
         }
-
-        @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    /* Add your mobile menu toggle styles here */
-}
-
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    justify-content: center;
-    align-items: center;
-    animation: fadeIn 0.3s;
-}
-
-.modal-content {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    max-width: 500px;
-    text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    border-top: 4px solid #931518;
-}
-
-.modal h3 {
-    color: #931518;
-    font-size: 24px;
-    margin-bottom: 15px;
-}
-
-.modal p {
-    color: #525252;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-#userEmail {
-    font-weight: bold;
-    color: #931518;
-}
-
-.modal-close-btn {
-    background-color: #898366;
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.modal-close-btn:hover {
-    background-color: #7a7a5a;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-
-@media (max-width: 768px) {
-  .form-input, .submit-btn {
-    min-height: 48px; /* Better touch targets */
-  }
-  
-  .qr-container {
-    width: 95% !important;
-  }
-}
-
     </style>
 </head>
 <body>
-    <body style="margin:0;padding:0">
-    <div class="main-container">
-        <!-- Header -->
-        <header class="header">
-<!-- Mobile Menu Toggle Button -->
-<button class="mobile-menu-toggle" aria-label="Toggle menu">
-  <span class="toggle-bar"></span>
-  <span class="toggle-bar"></span>
-  <span class="toggle-bar"></span>
-</button>
+    <!-- Header -->
+    <header class="header">
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </button>
 
-<!-- Mobile Menu Overlay -->
-<div class="mobile-menu-overlay">
-  <div class="mobile-menu-content">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="program.html">Programs</a>
-    <a href="https://linktr.ee/transfornation" target="_blank">Get Involved</a>
-    <a href="donate.html" class="mobile-donate-btn">Donate</a>
-  </div>
-</div>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+          <div class="mobile-menu-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="program.html">Programs</a>
+            <a href="https://linktr.ee/transfornation" target="_blank">Get Involved</a>
+            <a href="donate.html" class="mobile-donate-btn">Donate</a>
+          </div>
+        </div>
 
-
-            <div class="logo-container">
-                <img src="Images/images-donate/img_logo_formal_1_1.png" alt="Transfornation Logo" class="logo">
-                <span class="logo-text">Transfornation</span>
-            </div>
-            <nav class="nav-menu">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About</a>
-                <a href="program.html" class="nav-link">Programs</a>
-                <a href="#" class="nav-link">Get Involved</a>
-                
-            </nav>
-            <button class="donate-btn">Donate</button>
-        </header>
-        
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <img src="Images/images-donate/img_dsc07508_1.png" alt="Donation Background" class="hero-image">
-            <div class="hero-content">
-                <h1 class="hero-title">Support Our Cause</h1>
-                <p class="hero-subtitle">Your donation helps us make a difference in the community</p>
-                
-                <!-- QR Code Section -->
-                <div class="qr-container">
-                    <div class="qr-frame">
-                        <img src="Images/images-donate/img_screenshot_20250312_003847_1.png" alt="QR Code" class="qr-code">
-                    </div>
-                    <p class="qr-text">Scan to donate via QRIS</p>
-                </div>
-                
-                <p class="bank-transfer-text">Or donate via bank transfer:</p>
-                
-                <div class="bank-details">
-                    <p class="bank-details-title">Bank Account Details</p>
-                    <p class="bank-details-text">Bank Name: Bank Konoha</p>
-                    <p class="bank-details-text">Account: <span class="account-number">1234-5678-9012</span></p>
-                    <p class="bank-details-text">Name: Rizzzler mengabdi</p>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Form Section -->
-        <section class="form-section">
-            <h2 class="form-title">Fill the form</h2>
-            <p class="form-subtitle">After making a donation, please fill in this form so that we can send you the donation certificate</p>
+        <div class="logo-container">
+            <img src="Images/images-donate/img_logo_formal_1_1.png" alt="Transfornation Logo" class="logo">
+            <span class="logo-text">Transfornation</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="program.html" class="nav-link">Programs</a>
+            <a href="#" class="nav-link">Get Involved</a>
+        </nav>
+        <button class="donate-btn">Donate</button>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <img src="Images/images-donate/img_dsc07508_1.png" alt="Donation Background" class="hero-image">
+        <div class="hero-content">
+            <h1 class="hero-title">Support Our Cause</h1>
+            <p class="hero-subtitle">Your donation helps us make a difference in the community</p>
             
-            <div class="form-container">
-                <form id="donationForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName" class="form-label">First Name</label>
-                            <input type="text" id="firstName" class="form-input" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName" class="form-label">Last Name</label>
-                            <input type="text" id="lastName" class="form-input" required>
-                        </div>
-                    </div>
-                    
-                    <div class="form-group" style="margin-bottom: 25px;">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" id="email" class="form-input" required>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        </section>
-        
-        <!-- Footer -->
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-columns">
-            <!-- Logo Section -->
-            <div class="footer-info">
-                <div class="footer-logo-container">
-                    <img src="Images/images-donate/img_logo_formal_1_1.png" alt="Transfornation Logo" class="footer-logo">
-                    <span class="footer-logo-text">Transfornation</span>
+            <!-- QR Code Section -->
+            <div class="qr-container">
+                <div class="qr-frame">
+                    <img src="Images/images-donate/img_screenshot_20250312_003847_1.png" alt="QR Code" class="qr-code">
                 </div>
-                <p class="footer-tagline">Making a difference through community service.</p>
+                <p class="qr-text">Scan to donate via QRIS</p>
             </div>
             
-            <!-- Quick Links -->
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html" class="footer-link">Home</a></li>
-                    <li><a href="about.html" class="footer-link">About Us</a></li>
-                    <li><a href="program.html" class="footer-link">Programs</a></li>
-                    <li><a href="https://linktr.ee/transfornation" class="footer-link" target="_blank">Get Involved</a></li>
-                </ul>
-            </div>
+            <p class="bank-transfer-text">Or donate via bank transfer:</p>
             
-            <!-- Social Links -->
-            <div class="footer-links">
-                <h3>Connect</h3>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/transfornation.id" aria-label="Instagram">
-                        <img src="Images/images-donate/img_frame.svg" alt="Instagram" class="social-icon">
-                    </a>
-                    <a href="https://www.tiktok.com/@transfornation_id" aria-label="TikTok">
-                        <img src="Images/images-donate/tiktok.svg" alt="TikTok" class="social-icon">
-                    </a>
-                </div>
+            <div class="bank-details">
+                <p class="bank-details-title">Bank Account Details</p>
+                <p class="bank-details-text">Bank Name: Bank Konoha</p>
+                <p class="bank-details-text">Account: <span class="account-number">1234-5678-9012</span></p>
+                <p class="bank-details-text">Name: Rizzzler mengabdi</p>
             </div>
         </div>
+    </section>
+    
+    <!-- Form Section -->
+    <section class="form-section">
+        <h2 class="form-title">Fill the form</h2>
+        <p class="form-subtitle">After making a donation, please fill in this form so that we can send you the donation certificate</p>
         
-        <!-- Copyright -->
-        <div class="footer-bottom">
-            <p>Copyright ©2025<br>Transfornation.</p>
+        <div class="form-container">
+            <form id="donationForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" id="firstName" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" id="lastName" class="form-input" required>
+                    </div>
+                </div>
+                
+                <div class="form-group" style="margin-bottom: 25px;">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
         </div>
-    </div>
-</footer>
-    </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <!-- Logo Section -->
+                <div class="footer-info">
+                    <div class="footer-logo-container">
+                        <img src="Images/images-donate/img_logo_formal_1_1.png" alt="Transfornation Logo" class="footer-logo">
+                        <span class="footer-logo-text">Transfornation</span>
+                    </div>
+                    <p class="footer-tagline">Making a difference through community service.</p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="program.html" class="footer-link">Programs</a></li>
+                        <li><a href="https://linktr.ee/transfornation" class="footer-link" target="_blank">Get Involved</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="footer-links">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/transfornation.id" aria-label="Instagram">
+                            <img src="Images/images-donate/img_frame.svg" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="https://www.tiktok.com/@transfornation_id" aria-label="TikTok">
+                            <img src="Images/images-donate/tiktok.svg" alt="TikTok" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>Copyright ©2025<br>Transfornation.</p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Success Modal -->
-<div id="successModal" class="modal">
-    <div class="modal-content">
-        <h3>Thank You! ❤️</h3>
-        <p>Your donation helps create positive change. The certificate will be sent to <span id="userEmail"></span> within 24 hours.</p>
-        <button class="modal-close-btn">OK</button>
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <h3>Thank You! ❤️</h3>
+            <p>Your donation helps create positive change. The certificate will be sent to <span id="userEmail"></span> within 24 hours.</p>
+            <button class="modal-close-btn">OK</button>
+        </div>
     </div>
-</div>
 
 <script>
 

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +12,12 @@
         }
         
         body {
-            background-color: #ffffff;
+            background-color: #F5F9F8; /* Background */
         }
         
         /* Header/Navigation */
         .header {
-            background-color: #898366;
+            background-color: #6CA7D4; /* Primary */
             height: 72px;
             width: 100%;
             display: flex;
@@ -49,7 +48,7 @@
         }
         
         .logo-text {
-            color: #ffffff;
+            color: #FFFFFF; /* Text (Light) */
             font-size: 20px;
             font-weight: 400;
             line-height: 25px;
@@ -62,7 +61,7 @@
         }
         
         .nav-link {
-            color: #ffffff;
+            color: #FFFFFF; /* Text (Light) */
             font-size: 16px;
             font-weight: 400;
             line-height: 20px;
@@ -91,12 +90,12 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #ffffff;
+            background-color: #FFFFFF; /* Text (Light) */
         }
 
         .donate-btn {
-            background-color: #931518;
-            color: #ffffff;
+            background-color: #A6D49F; /* Secondary */
+            color: #333333; /* Text (Dark) */
             font-size: 16px;
             font-weight: 400;
             line-height: 20px;
@@ -110,96 +109,97 @@
         }
 
         .donate-btn:hover {
-            background-color: #7a1214;
+            background-color: #8EC486; /* Darker Secondary */
         }
 
-/* Mobile Menu Toggle Button */
-.mobile-menu-toggle {
-  display: none; /* Hidden by default (shown only on mobile) */
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 1001;
-}
+        /* Mobile Menu Toggle Button */
+        .mobile-menu-toggle {
+          display: none;
+          background: none;
+          border: none;
+          cursor: pointer;
+          padding: 10px;
+          z-index: 1001;
+        }
 
-.toggle-bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: #ffffff;
-  margin: 5px 0;
-  transition: transform 0.3s, opacity 0.3s;
-}
+        .toggle-bar {
+          display: block;
+          width: 25px;
+          height: 3px;
+          background: #FFFFFF; /* Text (Light) */
+          margin: 5px 0;
+          transition: transform 0.3s, opacity 0.3s;
+        }
 
-/* Mobile Menu Overlay */
-.mobile-menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(137, 131, 102, 0.95);
-  z-index: 1000;
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+        /* Mobile Menu Overlay */
+        .mobile-menu-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(108, 167, 212, 0.95); /* Primary with opacity */
+          z-index: 1000;
+          display: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
 
-.mobile-menu-content {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  text-align: center;
-}
+        .mobile-menu-content {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+          text-align: center;
+        }
 
-.mobile-menu-content a {
-  color: #ffffff;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 10px;
-}
+        .mobile-menu-content a {
+          color: #FFFFFF; /* Text (Light) */
+          font-size: 20px;
+          text-decoration: none;
+          padding: 10px;
+        }
 
-.mobile-donate-btn {
-  background: #931518;
-  border-radius: 20px;
-  padding: 10px 20px !important;
-}
+        .mobile-donate-btn {
+          background: #A6D49F; /* Secondary */
+          border-radius: 20px;
+          padding: 10px 20px !important;
+          color: #333333; /* Text (Dark) */
+        }
 
-/* Active state for mobile menu */
-.mobile-menu-overlay.active {
-  display: flex;
-}
+        /* Active state for mobile menu */
+        .mobile-menu-overlay.active {
+          display: flex;
+        }
 
-/* Transform toggle into "X" when active */
-.mobile-menu-toggle.active .toggle-bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-.mobile-menu-toggle.active .toggle-bar:nth-child(2) {
-  opacity: 0;
-}
-.mobile-menu-toggle.active .toggle-bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
+        /* Transform toggle into "X" when active */
+        .mobile-menu-toggle.active .toggle-bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+        }
+        .mobile-menu-toggle.active .toggle-bar:nth-child(2) {
+          opacity: 0;
+        }
+        .mobile-menu-toggle.active .toggle-bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+        }
 
-/* Hide desktop nav on mobile */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none !important; /* Force hide desktop nav */
-  }
-  .mobile-menu-toggle {
-    display: block; /* Show toggle button */
-  }
-}
+        /* Hide desktop nav on mobile */
+        @media (max-width: 768px) {
+          .nav-links {
+            display: none !important;
+          }
+          .mobile-menu-toggle {
+            display: block;
+          }
+        }
 
-.mobile-menu-overlay {
-  transition: opacity 0.3s;
-  opacity: 0;
-}
-.mobile-menu-overlay.active {
-  opacity: 1;
-}
+        .mobile-menu-overlay {
+          transition: opacity 0.3s;
+          opacity: 0;
+        }
+        .mobile-menu-overlay.active {
+          opacity: 1;
+        }
         
         /* Hero Section */
         .hero {
@@ -230,12 +230,12 @@
             position: relative;
             z-index: 1;
             text-align: center;
-            max-width: 800px;
+            max-width: 800px; /* Match Home page width */
             padding: 0 20px;
         }
         
         .hero-title {
-            color: #ffffff;
+            color: #FFFFFF; /* Text (Light) */
             font-size: 48px;
             font-weight: 400;
             line-height: 59px;
@@ -243,7 +243,7 @@
         }
         
         .hero-text {
-            color: #ffffff;
+            color: #FFFFFF; /* Text (Light) */
             font-size: 20px;
             font-weight: 300;
             line-height: 30px;
@@ -254,14 +254,14 @@
         .get-involved-btn {
             display: inline-block;
             text-decoration: none;
-            background-color: rgba(147, 21, 24, 0.61);
-            color: #ffffff;
+            background-color: rgba(108, 167, 212, 0.61); /* Primary with opacity */
+            color: #FFFFFF; /* Text (Light) */
             font-size: 16px;
             font-weight: 400;
             line-height: 20px;
             padding: 16px 30px;
             border-radius: 8px;
-            border: 1px solid #ffffff;
+            border: 1px solid #FFFFFF;
             cursor: pointer;
             transition: all 0.3 ease;
         }
@@ -269,7 +269,7 @@
         .get-involved-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-            background-color: rgba(206, 33, 36, 0.8);
+            background-color: rgba(94, 142, 179, 0.8); /* Button Hover */
         }
 
         .get-involved-btn {
@@ -303,7 +303,7 @@
             font-size: 30px;
             font-weight: 400;
             line-height: 37px;
-            color: #000000;
+            color: #333333; /* Text (Dark) */
             margin-bottom: 50px;
         }
         
@@ -318,7 +318,7 @@
         }
         
         .team-card {
-            background-color: #ffffff;
+            background-color: #FFFFFF; /* Background */
             border-radius: 8px;
             width: 224px;
             height: 296px;
@@ -341,7 +341,7 @@
             font-size: 16px;
             font-weight: 400;
             line-height: 20px;
-            color: #000000;
+            color: #333333; /* Text (Dark) */
             margin-bottom: 7px;
         }
         
@@ -353,322 +353,265 @@
         }
         
         .yellow-section {
-            background-color: #faaf17;
+            background-color: #A6D49F; /* Secondary */
             padding: 50px 0;
         }
-        
-/* Enhanced Team Card Animations */
-.team-card {
-    transition: all 0.3s ease;
-    position: relative;
-}
 
-/* White background cards */
-.team-section .team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
+        /* Enhanced Team Card Animations */
+        .team-card {
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-/* Yellow background cards */
-.yellow-section .team-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+        /* White background cards */
+        .team-section .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
 
-/* Add subtle scale effect on image hover */
-.team-img {
-    transition: transform 0.3s ease;
-}
+        /* Yellow background cards */
+        .yellow-section .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
 
-.team-card:hover .team-img {
-    transform: scale(1.05);
-}
+        /* Add subtle scale effect on image hover */
+        .team-img {
+            transition: transform 0.3s ease;
+        }
 
-/* Add border effect on hover */
-.team-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: 8px;
-    border: 2px solid rgba(147, 21, 24, 0);
-    transition: border-color 0.3s ease;
-    pointer-events: none;
-}
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+        }
 
-.team-card:hover::after {
-    border-color: rgba(147, 21, 24, 0.3);
-}
+        /* Add border effect on hover */
+        .team-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px;
+            border: 2px solid rgba(108, 167, 212, 0); /* Primary with opacity */
+            transition: border-color 0.3s ease;
+            pointer-events: none;
+        }
 
-/* Name highlight effect */
-.team-name {
-    transition: color 0.3s ease;
-}
+        .team-card:hover::after {
+            border-color: rgba(108, 167, 212, 0.3); /* Primary with opacity */
+        }
 
-.team-card:hover .team-name {
-    color: #931518; /* Your brand red color */
-}
+        /* Name highlight effect */
+        .team-name {
+            transition: color 0.3s ease;
+        }
 
+        .team-card:hover .team-name {
+            color: #6CA7D4; /* Primary */
+        }
 
         /* Footer */
-        /* --- Footer Alignment Fix --- */
-/* Footer Styles */
-.footer {
-    background-color: #171717;
-    color: #ffffff;
-    padding: 60px 20px 30px;
-    text-align: center;
-}
+        .footer {
+            background-color: #333333; /* Text (Dark) */
+            color: #FFFFFF; /* Text (Light) */
+            padding: 60px 20px 30px;
+            text-align: center;
+        }
 
-.footer-content {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
 
-.footer-columns {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 40px;
-}
+        .footer-columns {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
 
-/* Logo Section */
-.footer-info {
-    flex: 1;
-    min-width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+        /* Logo Section */
+        .footer-info {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-.footer-logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-    gap: 10px;
-}
+        .footer-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            gap: 10px;
+        }
 
-.footer-logo {
-    height: 28px;
-    width: auto;
-    max-width: 22px;
-}
+        .footer-logo {
+            height: 28px;
+            width: auto;
+            max-width: 22px;
+        }
 
-.footer-logo-text {
-    font-size: 20px;
-    font-weight: 400;
-    color: #ffffff;
-    line-height: 1;
-}
+        .footer-logo-text {
+            font-size: 20px;
+            font-weight: 400;
+            color: #FFFFFF; /* Text (Light) */
+            line-height: 1;
+        }
 
-.footer-tagline {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #a3a3a3;
-    margin-top: 10px;
-    max-width: 250px;
-}
+        .footer-tagline {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #D3E3DC; /* Accent */
+            margin-top: 10px;
+            max-width: 250px;
+        }
 
-/* Links Section */
-.footer-links {
-    flex: 1;
-    min-width: 150px;
-}
+        /* Links Section */
+        .footer-links {
+            flex: 1;
+            min-width: 150px;
+        }
 
-.footer-links h3 {
-    font-size: 18px;
-    font-weight: 500;
-    color: #ffffff;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
+        .footer-links h3 {
+            font-size: 18px;
+            font-weight: 500;
+            color: #FFFFFF; /* Text (Light) */
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
 
-.footer-links h3::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 2px;
-    background-color: rgba(147, 21, 23, 0);
-}
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: rgba(163, 212, 159, 0); /* Secondary with opacity */
+        }
 
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.footer-links li {
-    margin-bottom: 12px;
-}
+        .footer-links li {
+            margin-bottom: 12px;
+        }
 
-.footer-link {
-    font-size: 16px;
-    color: #a3a3a3;
-    text-decoration: none;
-    transition: color 0.3s;
-}
+        .footer-link {
+            font-size: 16px;
+            color: #D3E3DC; /* Accent */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
 
-.footer-link:hover {
-    color: #ffffff;
-}
+        .footer-link:hover {
+            color: #FFFFFF; /* Text (Light) */
+        }
 
-/* Social Icons */
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 7px;
-    margin-top: 0px;
-}
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 7px;
+            margin-top: 0px;
+        }
 
-.social-icon {
-    width: 20px;
-    height: 20px;
-    filter: brightness(0) invert(1);
-    transition: opacity 0.3s;
-}
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1);
+            transition: opacity 0.3s;
+        }
 
-.social-icon:hover {
-    opacity: 0.8;
-}
+        .social-icon:hover {
+            opacity: 0.8;
+        }
 
-/* Copyright Section */
-.footer-bottom {
-    text-align: center;
-    padding-top: 30px;
-    margin-top: 30px;
-    border-top: 1px solid #333;
-}
+        /* Larger TikTok icon */
+        .social-links a[aria-label="TikTok"] .social-icon {
+            width: 26px;
+            height: 22px;
+        }
 
-.footer-bottom p {
-    font-size: 14px;
-    color: #a3a3a3;
-    line-height: 1.6;
-    margin: 0;
-}
+        /* Copyright Section */
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid #444;
+        }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .footer-columns {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-    
-    .footer-links {
-        text-align: center;
-    }
-    
-    .footer-links h3::after {
-        display: none;
-    }
-    
-    .footer-logo-container {
-        justify-content: center;
-    }
-}
+        .footer-bottom p {
+            font-size: 14px;
+            color: #D3E3DC; /* Accent */
+            line-height: 1.6;
+            margin: 0;
+        }
 
-@media (max-width: 768px) {
-    .footer-columns {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-    
-    .footer-links {
-        text-align: center;
-    }
-    
-    .footer-links h3::after {
-        display: none;
-    }
-}
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .footer-columns {
+                flex-direction: column;
+                align-items: center;
+                gap: 30px;
+            }
+            
+            .footer-links {
+                text-align: center;
+            }
+            
+            .footer-links h3::after {
+                display: none;
+            }
+            
+            .footer-logo-container {
+                justify-content: center;
+            }
+        }
 
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-}
-
-.social-icons a {
-    text-decoration: none; /* Removes underline */
-    border-bottom: none !important; /* Ensures no border */
-}
-
-.social-icon {
-    filter: brightness(0) invert(1); /* Makes icons white */
-    width: 15px; /* Standardizes icon size */
-}
-
-/* Optional: Larger TikTok icon */
-.social-links a[aria-label="TikTok"] .social-icon {
-  width: 26px;  /* Slightly larger */
-  height: 22px;
-}
-
-.footer-logo {
-    width: 20px;  /* Adjust this value as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.footer-logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* Space between logo and text */
-}
-
-.footer-logo-text {
-    font-size: 1.2rem; /* Adjust logo text size */
-}
-
-@media (max-width: 600px) {
-  .team-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem;
-  }
-  
-  .team-card {
-    min-width: 100% !important;
-  }
-}
-
-
+        @media (max-width: 600px) {
+          .team-grid {
+            grid-template-columns: 1fr !important;
+            gap: 1.5rem;
+          }
+          
+          .team-card {
+            min-width: 100% !important;
+          }
+        }
     </style>
 </head>
 <body>
     <!-- Header/Navigation -->
     <header class="header">
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle" aria-label="Toggle menu">
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+          <span class="toggle-bar"></span>
+        </button>
 
-<!-- Mobile Menu Toggle Button -->
-<button class="mobile-menu-toggle" aria-label="Toggle menu">
-  <span class="toggle-bar"></span>
-  <span class="toggle-bar"></span>
-  <span class="toggle-bar"></span>
-</button>
-
-<!-- Mobile Menu Overlay -->
-<div class="mobile-menu-overlay">
-  <div class="mobile-menu-content">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="program.html">Programs</a>
-    <a href="https://linktr.ee/transfornation" target="_blank">Get Involved</a>
-    <a href="donate.html" class="mobile-donate-btn">Donate</a>
-  </div>
-</div>
+        <!-- Mobile Menu Overlay -->
+        <div class="mobile-menu-overlay">
+          <div class="mobile-menu-content">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="program.html">Programs</a>
+            <a href="https://linktr.ee/transfornation" target="_blank">Get Involved</a>
+            <a href="donate.html" class="mobile-donate-btn">Donate</a>
+          </div>
+        </div>
 
         <div class="logo-container">
             <img src="Images/images-about/img_logo_formal_1_2.png" alt="Transfornation Logo" class="logo">
@@ -680,7 +623,6 @@
             <a href="about.html" class="nav-link active">About</a>
             <a href="program.html" class="nav-link">Programs</a>
             <a href="#" class="nav-link">Get Involved</a>
-            
         </nav>
         
         <a href="donate.html" class="donate-btn">Donate</a>
@@ -755,50 +697,49 @@
     </section>
     
     <!-- Footer -->
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-columns">
-            <!-- Logo Section -->
-            <div class="footer-info">
-                <div class="footer-logo-container">
-                    <img src="Images/images-about/img_logo_formal_1_2.png" alt="Transfornation Logo" class="footer-logo">
-                    <span class="footer-logo-text">Transfornation</span>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-columns">
+                <!-- Logo Section -->
+                <div class="footer-info">
+                    <div class="footer-logo-container">
+                        <img src="Images/images-about/img_logo_formal_1_2.png" alt="Transfornation Logo" class="footer-logo">
+                        <span class="footer-logo-text">Transfornation</span>
+                    </div>
+                    <p class="footer-tagline">Making a difference through community service.</p>
                 </div>
-                <p class="footer-tagline">Making a difference through community service.</p>
+                
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" class="footer-link">Home</a></li>
+                        <li><a href="about.html" class="footer-link">About Us</a></li>
+                        <li><a href="program.html" class="footer-link">Programs</a></li>
+                        <li><a href="https://linktr.ee/transfornation" class="footer-link" target="_blank">Get Involved</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="footer-links">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/transfornation.id" aria-label="Instagram">
+                            <img src="Images/images-about/img_frame.svg" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="https://www.tiktok.com/@transfornation_id" aria-label="TikTok">
+                            <img src="Images/images-about/tiktok.svg" alt="TikTok" class="social-icon">
+                        </a>
+                    </div>
+                </div>
             </div>
             
-            <!-- Quick Links -->
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html" class="footer-link">Home</a></li>
-                    <li><a href="about.html" class="footer-link">About Us</a></li>
-                    <li><a href="program.html" class="footer-link">Programs</a></li>
-                    <li><a href="https://linktr.ee/transfornation" class="footer-link" target="_blank">Get Involved</a></li>
-                </ul>
-            </div>
-            
-            <!-- Social Links -->
-            <div class="footer-links">
-                <h3>Connect</h3>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/transfornation.id" aria-label="Instagram">
-                        <img src="Images/images-about/img_frame.svg" alt="Instagram" class="social-icon">
-                    </a>
-                    <a href="https://www.tiktok.com/@transfornation_id" aria-label="TikTok">
-                        <img src="Images/images-about/tiktok.svg" alt="TikTok" class="social-icon">
-                    </a>
-                </div>
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p>Copyright ©2025<br>Transfornation.</p>
             </div>
         </div>
-        
-        <!-- Copyright -->
-        <div class="footer-bottom">
-            <p>Copyright ©2025<br>Transfornation.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
     
     <script>
         // Get Involved button functionality
